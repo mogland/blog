@@ -18,5 +18,7 @@ export default defineConfig({
     ['link', { rel: 'mask-icon', href: '/logo.svg', color: '#ffffff' }],
     ['script', { async: "", defer: "", 'data-website-id': 'db355c05-e3d6-4e4c-a813-fccbc15e39b0', src: 'https://umami.iucky.cn/umami.js' }],
     
-  ]
+  ],
+
+  base: '/blog',
 })
