@@ -1,0 +1,22 @@
+{
+  "name": "vue-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress",
+    "build": "vitepress build && tsx ./.vitepress/genFeed",
+    "serve": "vitepress serve"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^18.11.9",
+    "feed": "^4.2.2",
+    "gray-matter": "^4.0.3",
+    "tailwindcss": "^3.2.1",
+    "tsx": "^3.11.0",
+    "vitepress": "^1.0.0-alpha.26",
+    "vue": "^3.2.41"
+  }
+}
