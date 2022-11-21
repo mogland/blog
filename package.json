@@ -9,14 +9,14 @@
     "serve": "vitepress serve"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.8",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.11.9",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
-    "tailwindcss": "^3.2.1",
-    "tsx": "^3.11.0",
-    "vitepress": "^1.0.0-alpha.26",
-    "vue": "^3.2.41"
+    "tailwindcss": "^3.2.4",
+    "tsx": "^3.12.1",
+    "vitepress": "^1.0.0-alpha.29",
+    "vue": "^3.2.45"
   }
 }
