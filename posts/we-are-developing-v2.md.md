@@ -1,12 +1,47 @@
 ---
-title: 预告：我们正在开发 Core v2 版本
+title: Foreshow：We are developing Core v2
 date: 2022-08-28
 author: Wibus
 avatar: https://github.com/wibus-wee.png
 twitter: '@wibus_wee'
 ---
 
-相信你已经看见在 GitHub 上有一个 Draft PR, [Core Pull Request #309](https://github.com/nx-space/core/pull/309)，里面已经基本列举了所有的计划以及修改注意事项.
+You may have seen a Draft PR on GitHub, [Core Pull Request #309](https://github.com/mogland/core/pull/309), which basically lists all the plans and modification notes.
+
+相信你已经看见在 GitHub 上有一个 Draft PR, [Core Pull Request #309](https://github.com/mogland/core/pull/309)，里面已经基本列举了所有的计划以及修改注意事项.
+
+---
+
+
+## Why is there a special PR to change?
+
+At the end of the day, it's still the change of architecture. The original core is only one program, and all the modules in it will eventually be imported into AppModule, which causes the following problems:
+
+- If this project was originally written by only one person, then subsequent updates can only be made by that person
+  - The directories are closely related to each other.
+  - The interface calls between the systems are tightly coupled and difficult to maintain
+- Any modification to the system must be redeployed or upgraded together
+- When the system load increases, it is difficult to scale horizontally
+- When a system has a problem, it will affect the entire system
+
+Using microservice architecture has many advantages:
+
+- A microservice that is only responsible for a very clear business is definitely easier to understand than a complex system
+- When modifying a microservice, it is easier to analyze what impact this modification will have
+- It is easier to update the core more frequently, and it is easy to release new features with very low integration cost
+- It is suitable for dealing with system business growth, and the scalability is higher than that of a single service
+- You can combine existing microservices to achieve functional reuse
+- An exception in a microservice will not cause other microservices to be abnormal at the same time
+
+Of course, there are also **disadvantages:**
+
+- High complexity, the code logic will be more complex
+- Need a well-designed monitoring system to monitor the running status of each microservice
+- Communication delay may be affected
+
+But I think the benefits outweigh the drawbacks, because using a microservice architecture can make our systems more flexible, more concise, easier to maintain, and easier to expand. For us, this will be a revolutionary update.
+
+At this stage, we recommend that you do not use Mog until Core v2 is released. Internal interfaces are expected to undergo many changes, and other ecosystems need to make modifications to the upstream. I hope v2 can meet you soon!.
 
 ---
 
@@ -38,4 +73,4 @@ twitter: '@wibus_wee'
 
 但我认为利大于弊，因为利用微服务架构，可以让我们的系统更加灵活，更加简洁，更加容易维护，更加容易扩展。对我们来说，这将会是一次革命性的更新。
 
-在目前阶段，我们将建议您不要使用 NEXT，直至 Core v2 发布。内部接口预计会出现很多变革，其他生态也需要对上游作出修改。希望 v2 能很快与你们见面！。
+在目前阶段，我们将建议您不要使用 Mog，直至 Core v2 发布。内部接口预计会出现很多变革，其他生态也需要对上游作出修改。希望 v2 能很快与你们见面！。
